@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowerCase = "abcdefghijklmnopqrstuvwxyz"
-var number ="0123456789"
+var numbers ="0123456789"
 var symbols = "!@#$%^&*("
 
 var userChoiceArray = []
@@ -15,26 +15,26 @@ function generatePassword(){
 
   var passwordLength = prompt('Please insert any number between 8 and 128')
   
-  if(passwordLength > 8 && passwordLength < 128){
-    var userChoiceUpper = confirm('Would you like upper case')
+  if(passwordLength >= 8 && passwordLength <= 128){
+    var userChoiceUpper = confirm('Would you like upper case?')
     if(userChoiceUpper){
       userChoiceArray.push(...upperCase)
     }
     console.log(userChoiceArray)
     
-    var userChoiceLower = confirm('Would you like lower case')
+    var userChoiceLower = confirm('Would you like lower case?')
     if(userChoiceLower){
       userChoiceArray.push(...lowerCase)
     }
     console.log(userChoiceArray)
     
-    var userChoiceNumber = confirm('Would you like number')
-    if(userChoiceNumber){
-      userChoiceArray.push(...number)
+    var userChoiceNumbers = confirm('Would you like numbers?')
+    if(userChoiceNumbers){
+      userChoiceArray.push(...numbers)
     }
     console.log(userChoiceArray)
     
-    var userChoiceSymbols = confirm('Would you like symbols')
+    var userChoiceSymbols = confirm('Would you like symbols?')
     if(userChoiceSymbols){
       userChoiceArray.push(...symbols)
     }
